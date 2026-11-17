@@ -19,5 +19,5 @@
 - Ubuntu/Windows、Python 3.11/3.12 的 GitHub Actions CI。
 - 方法、判据、误报边界与局限文档 `docs/methods.md`。
 
-[Unreleased]: https://github.com/YilongXiao/citecheck-zh/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/YilongXiao/citecheck-zh/releases/tag/v0.1.0
+[Unreleased]: https://github.com/uppercrusteve/citecheck-zh/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/uppercrusteve/citecheck-zh/releases/tag/v0.1.0

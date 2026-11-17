@@ -2,7 +2,7 @@
 
 **中文稿件引文—文献表一致性检查。** 在投稿前找出“正文引了但文献表没有、文献表有但正文没引、编号断档、重复条目、坏 DOI”这类结构性问题。
 
-[![CI](https://github.com/YilongXiao/citecheck-zh/actions/workflows/ci.yml/badge.svg)](https://github.com/YilongXiao/citecheck-zh/actions/workflows/ci.yml)
+[![CI](https://github.com/uppercrusteve/citecheck-zh/actions/workflows/ci.yml/badge.svg)](https://github.com/uppercrusteve/citecheck-zh/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.10–3.12](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-blue)](pyproject.toml)
 [![Ruff](https://img.shields.io/badge/lint-ruff-261230.svg)](pyproject.toml)
@@ -26,7 +26,7 @@ citecheck-zh 只做结构核对：不判断文献质量，不联网，不调用�
 Windows PowerShell：
 
 ```powershell
-git clone https://github.com/YilongXiao/citecheck-zh.git
+git clone https://github.com/uppercrusteve/citecheck-zh.git
 cd citecheck-zh
 py -3.12 -m venv .venv
 .\.venv\Scripts\Activate.ps1
@@ -36,7 +36,7 @@ python -m pip install -e .
 macOS / Linux：
 
 ```bash
-git clone https://github.com/YilongXiao/citecheck-zh.git
+git clone https://github.com/uppercrusteve/citecheck-zh.git
 cd citecheck-zh
 python3 -m venv .venv
 source .venv/bin/activate
@@ -125,7 +125,7 @@ pytest -q
   year    = {2026},
   version = {0.1.0},
   license = {MIT},
-  url     = {https://github.com/YilongXiao/citecheck-zh}
+  url     = {https://github.com/uppercrusteve/citecheck-zh}
 }
 ```
 
