@@ -9,7 +9,7 @@ description = "Structural citation/reference consistency checker for Chinese man
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
-authors = [{ name = "Yilong Xiao", email = "uppercrusteve@users.noreply.github.com" }]
+authors = [{ name = "uppercrusteve", email = "uppercrusteve@users.noreply.github.com" }]
 keywords = ["citations", "references", "chinese", "manuscript", "cli"]
 classifiers = [
   "Programming Language :: Python :: 3",

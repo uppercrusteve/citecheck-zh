@@ -120,7 +120,7 @@ pytest -q
 
 ```bibtex
 @software{xiao_citecheck_zh_2026,
-  author  = {Xiao, Yilong},
+  author  = {uppercrusteve},
   title   = {citecheck-zh: Structural citation-reference consistency checker for Chinese manuscripts},
   year    = {2026},
   version = {0.1.0},
@@ -135,4 +135,4 @@ citecheck-zh is an offline, rule-based consistency checker for citation markers 
 
 ## License
 
-MIT。见 [LICENSE](LICENSE)。版权行：Copyright (c) 2026 Yilong Xiao。
+MIT。见 [LICENSE](LICENSE)。版权行：Copyright (c) 2026 uppercrusteve。

@@ -8,8 +8,7 @@ abstract: >-
   structural citation/reference inconsistencies with 1-based line and column
   positions. Includes a first-appearance renumbering command.
 authors:
-  - family-names: Xiao
-    given-names: Yilong
+  - name: "uppercrusteve"
     email: uppercrusteve@users.noreply.github.com
 version: 0.1.0
 date-released: 2026-11-17
