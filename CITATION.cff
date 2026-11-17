@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use citecheck-zh in your work, please cite it as below."
+type: software
+title: "citecheck-zh: Structural citation-reference consistency checker for Chinese manuscripts"
+abstract: >-
+  Offline command-line checker that parses UTF-8 Markdown/TXT manuscripts,
+  detects numeric and author-year citation markers, and reports ten classes of
+  structural citation/reference inconsistencies with 1-based line and column
+  positions. Includes a first-appearance renumbering command.
+authors:
+  - family-names: Xiao
+    given-names: Yilong
+    email: YilongXiao@users.noreply.github.com
+version: 0.1.0
+date-released: 2026-11-17
+license: MIT
+repository-code: https://github.com/YilongXiao/citecheck-zh
+url: https://github.com/YilongXiao/citecheck-zh
+keywords:
+  - citations
+  - references
+  - chinese
+  - manuscript
+  - cli
+  - reproducibility
