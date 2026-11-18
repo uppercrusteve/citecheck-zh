@@ -39,7 +39,9 @@ def _plan(doc: Document) -> tuple[dict[int, int], list]:
         if ref.number is not None and ref.number not in order:
             order.append(ref.number)
     mapping = {old: new for new, old in enumerate(order, start=1)}
-    ordered = [next(r for r in doc.references if r.number == old) for old in order]
+    # Duplicate entries share a number; keep every one of them in the rebuilt
+    # list instead of silently dropping all but the first.
+    ordered = [ref for old in order for ref in doc.references if ref.number == old]
     return mapping, ordered
 
 
@@ -48,16 +50,20 @@ def rewrite_citations(line: str, mapping: dict[int, int]) -> str:
 
     def replace(match: re.Match[str]) -> str:
         numbers = sorted(
-            {mapping[n] for n in _expand_numbers(match.group(1)) if n in mapping}
+            # Unknown numbers (dangling citations) stay as they are rather
+            # than disappearing from the text.
+            {mapping.get(n, n) for n in _expand_numbers(match.group(1))}
         )
         if not numbers:
-            return ""
+            return match.group(0)
         return f"[{_compress(numbers)}]"
 
     rewritten = _NUM_GROUP_RE.sub(replace, line)
     if rewritten == line:
         return line
-    return re.sub(r"[ \t]{2,}", " ", rewritten)
+    # Collapse doubled spaces inside the line but leave a trailing double
+    # space alone: it is a Markdown hard line break.
+    return re.sub(r"(?<=\S)[ \t]{2,}(?=\S)", " ", rewritten)
 
 
 def renumber_document(text: str, path: str = "<stdin>") -> tuple[str, int, int]:

@@ -98,3 +98,26 @@ def test_renumber_missing_input_exits_two(capsys):
 
     assert main(["renumber", "nope.md"]) == 2
     assert "file not found" in capsys.readouterr().err
+
+
+def test_renumber_keeps_dangling_number_in_text():
+    doc = DOC.replace("正文[3]与[1-2]，另见[2]。", "正文[3]与[1-2]，另见[9]。")
+    result, _, _ = renumber_document(doc)
+    assert "另见[9]" in result
+
+
+def test_renumber_keeps_duplicate_entries():
+    doc = DOC.replace(
+        "[3] C. (2022). Third entry. J, 1, 3. doi:10.1000/c",
+        "[3] C. (2022). Third entry. J, 1, 3. doi:10.1000/c\n"
+        "[3] C. (2022). Third entry. J, 1, 3. doi:10.1000/c",
+    )
+    result, _, entries = renumber_document(doc)
+    assert entries == 4
+    assert result.count("Third entry") == 2
+
+
+def test_renumber_keeps_markdown_hard_break():
+    doc = DOC.replace("另见[2]。", "另见[2]。  ")
+    result, _, _ = renumber_document(doc)
+    assert "另见[3]。  \n" in result
