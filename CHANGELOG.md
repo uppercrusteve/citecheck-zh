@@ -4,15 +4,13 @@
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-11-18
+
 ### Fixed
 
 - `renumber` keeps dangling citation numbers instead of deleting them, keeps
   duplicate reference entries, and no longer turns trailing Markdown hard
   line breaks into single spaces.
-
-## [Unreleased]
-
-## [0.1.0] - 2026-11-17
 
 ### Added
 
