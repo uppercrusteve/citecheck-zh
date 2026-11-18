@@ -119,7 +119,7 @@ pytest -q
 若在论文或工具链中使用，请按 [CITATION.cff](CITATION.cff) 引用：
 
 ```bibtex
-@software{xiao_citecheck_zh_2026,
+@software{uppercrusteve_citecheck_zh_2026,
   author  = {uppercrusteve},
   title   = {citecheck-zh: Structural citation-reference consistency checker for Chinese manuscripts},
   year    = {2026},
