@@ -69,7 +69,7 @@ citecheck renumber examples/seed_errors.md --force
 citecheck check seed_errors.renumbered.md --color never
 ```
 
-`renumber` 默认输出 `<文件名>.renumbered.md`；上例中重排了 12 条文献、更新了 4 行正文，复查时 C04 的越界与顺序问题消失。
+`renumber` 默认输出 `<文件名>.renumbered.md`；上例中重排了 12 条文献、更新了 4 行正文，复查时 C04 的越界与顺序问题消失。正文里指向不存在条目的编号保持原样，便于先看 C01 再决定删改。
 
 ## 输入格式与输出
 
